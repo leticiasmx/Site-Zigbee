@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zigbee - A Rede para IoT</title>
+    <style>
+        :root {
+            --primary-color: #c72b5c;
+            --secondary-color: #6c757d;
+            --dark-color: #393d40;
+            --light-color: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: var(--dark-color);
+            padding: 0.5rem;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin: 0 1rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background-color: var(--primary-color);
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        section {
+            margin-bottom: 2rem;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        h1, h2, h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 1rem auto;
+            border-radius: 8px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .feature-card {
+            background: #f1f7fe;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tecnologia Zigbee</h1>
+        <p>O protocolo de comunicação para a Internet das Coisas</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#como-funciona">Como Funciona</a></li>
+            <li><a href="#vantagens">Vantagens</a></li>
+            <li><a href="#aplicacoes">Aplicações</a></li>
+            <li><a href="#dispositivos">Dispositivos</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="sobre">
+            <h2>Sobre o Zigbee</h2>
+            <img src="https://www.makerhero.com/wp-content/uploads/2024/10/O-que-e-zigbee_-Entenda-funcionamento-e-suas-vantagens-img-blog-2.png" alt="Rede Zigbee" width="600">
+            <p> Zigbee é um protocolo sem fio muito usado em dispositivos de casa inteligente, principalmente pela facilidade de transmitir pequenos pacotes de dados com baixo consumo de energia. Dessa forma, os dispositivos podem ser usados por meses sem a necessidade de recarregar ou trocar a bateria. </p>
+            <p> A tecnologia cria uma rede exclusiva dentro de casa para os dispositivos inteligentes,  permitindo controlar inúmeros aparelhos para automação residencial por meio do celular.</p>
+            <p> Para facilitar o entendimento, o Zigbee é como se fosse uma rede Wi-Fi, até porque ele opera no mesmo tipo de frequência. A diferença é que o Zigbee fica sendo uma rede exclusiva para os dispositivos de automação residencial.</p>
+            <p> Para facilitar o entendimento, o Zigbee é como se fosse uma rede Wi-Fi, até porque ele opera no mesmo tipo de frequência. A diferença é que o Zigbee fica sendo uma rede exclusiva para os dispositivos de automação residencial.</p>
+            <p> Ele é baseado no padrão IEEE 802.15.4, o Zigbee opera nas frequências de 2.4 GHz (global), 915 MHz (Américas) e 868 MHz (Europa).</p>
+            <p> Desenvolvido pela Zigbee Alliance (agora Connectivity Standards Alliance), o protocolo foi criado para ser uma alternativa mais eficiente em termos de energia do que o Wi-Fi ou Bluetooth para dispositivos que precisam de comunicação confiável com baixa taxa de transferência de dados.</p>
+
+        </section>
+        
+        <section id="como-funciona">
+            <h2>Como Funciona o Zigbee</h2>
+            <p> Para os dispositivos Zigbee funcionarem, geralmente é necessário instalar um hub de automação. Por meio de um hub como esse, pode-se gerenciar diversos dispositivos Zigbee na residência. </p>
+            <p> Somente o hub precisa se conectar ao roteador de internet, enquanto os outros dispositivos inteligentes se conectam diretamente ao hub, não sobrecarregando o roteador. A partir disso, o gerenciamento dos equipamentos é feito pelo celular, garantindo praticidade e mobilidade.</p>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Coordinator</h3>
+                    <p>O dispositivo principal que inicia e controla a rede. Cada rede Zigbee tem exatamente um coordenador.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Router</h3>
+                    <p>Dispositivos que retransmitem mensagens, estendendo o alcance da rede. Podem também ter funcionalidades específicas.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>End Device</h3>
+                    <p>Dispositivos finais que se comunicam apenas com o roteador ou coordenador, geralmente com baixo consumo de energia.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="vantagens">
+            <h2>Vantagens do Zigbee</h2>
+            <ul>
+                <li><strong>Baixo consumo de energia:</strong> Dispositivos podem operar por anos com baterias pequenas.</li>
+                <li><strong>Rede em malha:</strong> Maior alcance e confiabilidade com auto-cura.</li>
+                <li><strong>Padrão aberto:</strong> Suportado por muitos fabricantes diferentes.</li>
+                <li><strong>Segurança:</strong> Criptografia AES-128 para comunicações.</li>
+                <li><strong>Escalabilidade:</strong> Suporta até 65.000 dispositivos em uma única rede.</li>
+                <li><strong>Baixa latência:</strong> Ideal para aplicações de automação.</li>
+            </ul>
+        </section>
+        
+        <section id="aplicacoes">
+            <h2>Aplicações do Zigbee</h2>
+            <p>O Zigbee é amplamente utilizado em diversos setores:</p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Automação Residencial</h3>
+                    <p>Controle de iluminação, termostatos, fechaduras inteligentes, sensores de movimento e muito mais.</p>
+                    <img src="https://constat.com.br/media/resize/1920x1920/blogpost/260/67a1201903617.png" alt="automação residencial" width="200">
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Saúde e Cuidado pessoal</h3>
+                    <p>Monitorar pacientes, acompanhar exercícios físicos e utilizar dispositivos médicos e wearables.</p>
+                    <img src="https://fonoaudiologiacampinas.com/wp-content/uploads/2018/04/a-dia-mundial-da-sa%C3%BAde.jpg" alt="Saúde" width="200">
+                </div>
+
+                <div class="feature-card">
+                    <h3>Periféricos para PC</h3>
+                    <p>Teclado, mouse e joystick</p>
+                    <img src="https://i3.wp.com/campograndenoticias.com.br/wp-content/uploads/2022/01/perifericos-computador-mouse-teclado-muito-mais.jpg" alt="Perifericos pc" width="200">
+                </div>
+
+                <div class="feature-card">
+                    <h3>Sistema de segurança</h3>
+                    <p>Monitorar e controlar sistemas de alarme, câmeras de segurança e fechaduras eletrônicas.</p>
+                    <img src="https://backend.intelbras.com/sites/default/files/2023-10/smarthome-img-seguranca.jpg" alt="Perifericos pc" width="200">
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Aplicações industriais</h3>
+                    <p>Monitoramento de equipamentos, sensores industriais e automação de processos.</p>
+                    <img src="https://greenpower.net.br/blog/wp-content/uploads/2021/12/automao-industrial.png" alt="Perifericos pc" width="200">
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Varejo</h3>
+                    <p>Carrinhos de compras inteligentes, assistentes pessoais de compras, etiquetas eletrônicas de prateleiras, e rastreamento de ativos.</p>
+                    <img src="https://jopavi.com.br/wp-content/uploads/2020/04/Rectangle-69.png" alt="Perifericos pc" width="200">
+                </div>
+            </div>
+        </section>
+        
+        <section id="dispositivos">
+            <h2>Dispositivos Zigbee Populares</h2>
+            <p>Alguns dos dispositivos Zigbee mais populares no mercado:</p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Hubs</h3>
+                    <p>É um dispositivo central que funciona como um ponto de controle para dispositivos Zigbee em uma casa inteligente.</p>
+                    <p>Ex:Amazon Echo (4ª geração), Samsung SmartThings Hub, Philips Hue Bridge</p>
+                    <img src="https://cdn.awsli.com.br/600x1000/2126/2126972/produto/244245648/sem-t-tulo-2-cmhijxhmtz.jpg" alt="Hub" width="200">
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Iluminação inteligente</h3>
+                    <p>Lâmpadas que podem ser controladas remotamente, ajustando a intensidade, cor e outras configurações.</p>
+                    <P>Ex:Lâmpadas Philips Hue, IKEA TRÅDFRI, Sengled Smart Bulbs</P>
+                    <img src="https://cdn.awsli.com.br/2500x2500/2440/2440882/produto/16481489616ba6ae8b3.jpg" alt="Iluminação inteligente" width="200">
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Sensores</h3>
+                    <p>Sensores de movimento, temperatura, luminosidade, entre outros, que podem ser integrados a sistemas de automação. Ex:Xiaomi Aqara, Sonoff SNZB-03, Centralite Motion Sensor</p>
+                    <img src="https://nedis-shop.nl/cdn/shop/files/ZBSM20WT_P50.jpg?v=1721654949" alt="Sensores" width="200">
+                </div>
+
+                <div class="feature-card">
+                    <h3>Fechaduras eletrônicas</h3>
+                    <P>Fechaduras que podem ser abertas e fechadas remotamente, com funcionalidades como controle de acesso e notificações de segurança.</P>
+                    <p>Ex:Belkin WeMo, Lutron Connected Bulb Remote, GE Enbrighten</p>
+                    <img src="https://cdn.awsli.com.br/600x700/436/436580/produto/307900177/1-rjmakxrbn7.png" alt="Interruptores" width="200">
+                </div>
+
+                <div class="feature-card">
+                    <h3>Termostatos</h3>
+                    <p>Dispositivos que controlam a temperatura de um ambiente, permitindo ajustar a temperatura de forma inteligente e automatizada.</p>
+                    <img src="https://images.tcdn.com.br/img/img_prod/793097/termostato_aquecimento_solar_220v_tlz1204n_tholz_1962005903_1_d91efb666293038327d7663b14168ad4.jpg" alt="Interruptores" width="200">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Trabalho de redes - Componentes: Sammya Letícia e Thayanne Oliveira </p>
+    </footer>
+</body>
+</html>
